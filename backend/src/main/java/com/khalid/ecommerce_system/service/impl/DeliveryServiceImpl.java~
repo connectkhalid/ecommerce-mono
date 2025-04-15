@@ -1,0 +1,38 @@
+package com.khalid.ecommerce_system.service.impl;
+
+import com.khalid.ecommerce_system.entity.OrderInfo;
+import com.khalid.ecommerce_system.repository.DeliveryInfoRepository;
+import com.khalid.ecommerce_system.repository.OrderInfoRepository;
+import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
+public class DeliveryServiceImpl {
+    private final OrderInfoRepository orderRepository;
+    private final DeliveryInfoRepository deliveryRepository;
+
+    @Scheduled(cron = "0 0 0 * * *") // Every day at midnight
+    @Transactional
+    public void migrateDeliveredOrders() {
+        List<OrderInfo> deliveredOrders = orderRepository.findByStatus("DELIVERED");
+
+        List<Delivery> deliveries = deliveredOrders.stream().map(order -> {
+            Delivery d = new Delivery();
+            d.setOrderId(order.getId());
+            d.setBuyerId(order.getBuyer().getId());
+            d.setProductName(order.getProduct().getName());
+            d.setPrice(order.getPriceAtOrderTime());
+            d.setQuantity(order.getQuantity());
+            d.setOrderedAt(order.getOrderedAt());
+            d.setDeliveredAt(order.getDeliveredAt());
+            return d;
+        }).collect(Collectors.toList());
+
+        deliveryRepository.saveAll(deliveries);
+        orderRepository.deleteAll(deliveredOrders);
+    }
+}

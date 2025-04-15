@@ -1,0 +1,3108 @@
+{
+	"info": {
+		"_postman_id": "a3ee6a8e-1277-4c0a-bbf4-1b22ba77aaf1",
+		"name": "E-Commerce System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29496949"
+	},
+	"item": [
+		{
+			"name": "User Management",
+			"item": [
+				{
+					"name": "Register-User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\" : \"Khalid\",\r\n    \"lastName\" : \"Hasan\",\r\n    \"mailAddress\": \"khalid.hasan@yahoo.com\",\r\n    \"password\": \"Aa@123456\",\r\n    \"phoneNumber\": \"01799919647\",\r\n    \"location\": \"Dhaka\",\r\n    \"roleCode\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/pub/register-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"pub",
+								"register-account"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UserCreateFailed_AlreadyExists422_Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\" : \"Khalid\",\r\n    \"lastName\" : \"Saif\",\r\n    \"mailAddress\": \"khalid.hasan@yahoo.com\",\r\n    \"password\": \"Aa@123456\",\r\n    \"phoneNumber\": \"01799919647\",\r\n    \"location\": \"Dhaka\",\r\n    \"roleCode\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/pub/register-account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"pub",
+										"register-account"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Apr 2025 13:36:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 422,\n    \"message\": \"ADMIN_ACCOUNT_CREATION_ERROR\",\n    \"error\": \"Admin account can not be created.\"\n}"
+						},
+						{
+							"name": "Register-User-Reqeust",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\" : \"Khalid\",\r\n    \"lastName\" : \"Hasan\",\r\n    \"mailAddress\": \"khalid.hasan@yahoo.com\",\r\n    \"password\": \"Aa@123456\",\r\n    \"phoneNumber\": \"01799919647\",\r\n    \"location\": \"Dhaka\",\r\n    \"roleCode\" : 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/pub/register-account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"pub",
+										"register-account"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Apr 2025 16:18:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"SUCCESSFULLY_CREATED\",\n    \"details\": {\n        \"userId\": 12,\n        \"firstName\": \"Khalid\",\n        \"lastName\": \"Hasan\",\n        \"mailAddress\": \"khalid.hasan@yahoo.com\",\n        \"password\": \"$2a$10$36WMwA.66oFSdNEKojMeouIiNUNMOcAICYFO5uYe9eNZoet.9z/FG\",\n        \"phoneNumber\": \"01799919647\",\n        \"location\": \"Dhaka\",\n        \"roleName\": \"USER\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mailAddress\": \"khalid.hasan1@gmail.com\",\r\n    \"password\": \"Aa@123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"authenticate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login_200_Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mailAddress\": \"khalid.hasan@gmail.com\",\r\n    \"password\": \"Aa@123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/authenticate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"authenticate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Apr 2025 16:26:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"LOGIN_SUCCESS\",\n    \"details\": {\n        \"userId\": 5,\n        \"roleId\": 1,\n        \"accessKey\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJraGFsaWQuaGFzYW5AZ21haWwuY29tIiwicm9sZXMiOiJBRE1JTiIsImlhdCI6MTc0NDY0ODAwNSwiZXhwIjoxNzQ0NzM0NDA1fQ.gMYMDNLbs0aVzOFSYZ6vdacVfYcfA-AIfQmPekHwq8XCbFIAdJLhHbH9A6XS88a1F4Q1ReeiQmwecJji_VTnvQ\",\n        \"firstName\": \"Khlaid\",\n        \"lastName\": \"Hasan\",\n        \"joiningDt\": \"2025-04-14T08:28:11.663+00:00\",\n        \"mailAddress\": \"khalid.hasan@gmail.com\",\n        \"password\": \"$2a$10$GN5vevVBpVXBAU.WJkjcG.i4xzsFF1/A3WzhCHnnvrb0/0kY/ky5K\",\n        \"deleteFlg\": false,\n        \"createdUserId\": 0\n    }\n}"
+						},
+						{
+							"name": "Login_BadCred_500_request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mailAddress\": \"khalid.hasan@gmail.com\",\r\n    \"password\": \"Aa@13456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/authenticate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"authenticate"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Apr 2025 17:54:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 500,\n    \"message\": \"An error occurred while processing your request.\",\n    \"error\": \"BadCredentialsException: Username or password is invalid.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "GameGird-Token {{GameGird-access-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-user-details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/private/get-user-details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"private",
+								"get-user-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-user-info",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\" : \"Khlaid\",\r\n    \"lastName\" : \"Hasan\",\r\n    \"phoneNumber\": \"01799919647\",\r\n    \"location\": \"Dhaka\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/private/update-admin-info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"private",
+								"update-admin-info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-User-list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/private/get-admin-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"private",
+								"get-admin-list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-admin-list_200_request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8081/api/private/get-admin-list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"get-admin-list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Apr 2025 16:59:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"SUCCESSFULLY_FETCHED\",\n    \"details\": [\n        {\n            \"userId\": 5,\n            \"firstName\": \"Khlaid\",\n            \"lastName\": \"Hasan\",\n            \"mailAddress\": \"khalid.hasan@gmail.com\",\n            \"password\": \"$2a$10$GN5vevVBpVXBAU.WJkjcG.i4xzsFF1/A3WzhCHnnvrb0/0kY/ky5K\",\n            \"phoneNumber\": \"01799919647\",\n            \"location\": \"Dhaka\",\n            \"roleName\": \"ADMIN\"\n        },\n        {\n            \"userId\": 6,\n            \"firstName\": \"Khlaid\",\n            \"lastName\": \"Hasan\",\n            \"mailAddress\": \"khalid.hasan1@gmail.com\",\n            \"password\": \"$2a$10$YvzKtmj/ETa5pn/4OA4aiOGw/y1kzhdz9pp1HGBvSfaTJx/ceTLDS\",\n            \"phoneNumber\": \"01799919647\",\n            \"location\": \"Dhaka\",\n            \"roleName\": \"USER\"\n        },\n        {\n            \"userId\": 12,\n            \"firstName\": \"Khalid\",\n            \"lastName\": \"Hasan\",\n            \"mailAddress\": \"khalid.hasan@yahoo.com\",\n            \"password\": \"$2a$10$36WMwA.66oFSdNEKojMeouIiNUNMOcAICYFO5uYe9eNZoet.9z/FG\",\n            \"phoneNumber\": \"01799919647\",\n            \"location\": \"Dhaka\",\n            \"roleName\": \"USER\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product Management",
+			"item": [
+				{
+					"name": "CreateProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Macbook Air M2 1TB\",\r\n    \"description\" : \"Apple Macbook Air M2 1TB USA Varient\",\r\n    \"price\" : 1700000,\r\n    \"quantity\" : 8,\r\n    \"imageUrl\" : \"D/ecommerce_system/image/products/MacbookAirM2.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/private/product/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"private",
+								"product",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create_Product_200_Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"iPhone\",\r\n    \"description\" : \"iPhone 14 Pro Max 256GB USA Varient\",\r\n    \"price\" : 130000,\r\n    \"quantity\" : 10,\r\n    \"imageUrl\" : \"D/ecommerce_system/image/products/iphone14pm256gb.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/private/product/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"product",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Apr 2025 17:00:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"SUCCESSFULLY_CREATED\",\n    \"details\": {\n        \"id\": 1,\n        \"name\": \"iPhone\",\n        \"description\": \"iPhone 14 Pro Max 256GB USA Varient\",\n        \"price\": 130000,\n        \"qty\": 10,\n        \"imageUrl\": \"D/ecommerce_system/image/products/iphone14pm256gb.jpg\",\n        \"createdDt\": \"2025-04-14T17:00:49.707+00:00\",\n        \"updatedDt\": \"2025-04-14T17:00:49.707+00:00\",\n        \"deleteFlg\": false\n    }\n}"
+						},
+						{
+							"name": "CreateProduct_AlreadyExists_409_Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"iPhone\",\r\n    \"description\" : \"iPhone 15 Pro Max 256GB USA Varient\",\r\n    \"price\" : 150000,\r\n    \"quantity\" : 12,\r\n    \"imageUrl\" : \"D/ecommerce_system/image/products/iphone15pm256gb.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/private/product/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"product",
+										"add"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Apr 2025 17:47:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 409,\n    \"message\": \"PRODUCT_ALREADY_EXISTS\",\n    \"error\": \"Product already exists. Please Enter different product name.\"\n}"
+						},
+						{
+							"name": "CreateProduct_AccessDenied_500_request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"iPhone\",\r\n    \"description\" : \"iPhone 15 Pro Max 256GB USA Varient\",\r\n    \"price\" : 150000,\r\n    \"quantity\" : 12,\r\n    \"imageUrl\" : \"D/ecommerce_system/image/products/iphone15pm256gb.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/private/product/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"product",
+										"add"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Apr 2025 17:56:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 500,\n    \"message\": \"An error occurred while processing your request.\",\n    \"error\": \"AccessDeniedException: Access is denied\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"3\",\r\n    \"name\" : \"iPhone 8\",\r\n    \"description\" : \"iPhone 15 Pro Max 256GB USA Varient\",\r\n    \"price\" : 15000,\r\n    \"quantity\" : 8,\r\n    \"imageUrl\" : \"D/ecommerce_system/image/products/iphone15pm256gb.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/private/product/update?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"private",
+								"product",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create_Product_200_Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"iPhone\",\r\n    \"description\" : \"iPhone 14 Pro Max 256GB USA Varient\",\r\n    \"price\" : 130000,\r\n    \"quantity\" : 10,\r\n    \"imageUrl\" : \"D/ecommerce_system/image/products/iphone14pm256gb.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/private/product/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"product",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Apr 2025 17:00:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"SUCCESSFULLY_CREATED\",\n    \"details\": {\n        \"id\": 1,\n        \"name\": \"iPhone\",\n        \"description\": \"iPhone 14 Pro Max 256GB USA Varient\",\n        \"price\": 130000,\n        \"qty\": 10,\n        \"imageUrl\": \"D/ecommerce_system/image/products/iphone14pm256gb.jpg\",\n        \"createdDt\": \"2025-04-14T17:00:49.707+00:00\",\n        \"updatedDt\": \"2025-04-14T17:00:49.707+00:00\",\n        \"deleteFlg\": false\n    }\n}"
+						},
+						{
+							"name": "CreateProduct_AlreadyExists_409_Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"iPhone\",\r\n    \"description\" : \"iPhone 15 Pro Max 256GB USA Varient\",\r\n    \"price\" : 150000,\r\n    \"quantity\" : 12,\r\n    \"imageUrl\" : \"D/ecommerce_system/image/products/iphone15pm256gb.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/private/product/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"product",
+										"add"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Apr 2025 17:47:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 409,\n    \"message\": \"PRODUCT_ALREADY_EXISTS\",\n    \"error\": \"Product already exists. Please Enter different product name.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/private/product/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"private",
+								"product",
+								"delete",
+								"2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateProduct_200_Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8081/api/private/product/delete/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"product",
+										"delete",
+										"2"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Apr 2025 18:05:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"SUCCESSFULLY_DELETED\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetProductList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/pub/product-list?page=2&size=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"pub",
+								"product-list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetProductList_200_request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8081/api/pub/product-list?page=2&size=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"pub",
+										"product-list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 06:44:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"SUCCESSFULLY_FETCHED\",\n    \"details\": [\n        {\n            \"id\": 6,\n            \"name\": \"Macbook Air M1 1TB\",\n            \"description\": \"Apple Macbook Air M1 1TB USA Varient\",\n            \"price\": 700000,\n            \"qty\": 8,\n            \"imageUrl\": \"D/ecommerce_system/image/products/MacbookAirM1.jpg\",\n            \"createdDt\": \"2025-04-14T18:34:51.566+00:00\",\n            \"updatedDt\": \"2025-04-14T18:34:51.566+00:00\",\n            \"deleteFlg\": false\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Macbook Air M2 1TB\",\n            \"description\": \"Apple Macbook Air M2 1TB USA Varient\",\n            \"price\": 1700000,\n            \"qty\": 8,\n            \"imageUrl\": \"D/ecommerce_system/image/products/MacbookAirM2.jpg\",\n            \"createdDt\": \"2025-04-14T18:35:10.797+00:00\",\n            \"updatedDt\": \"2025-04-14T18:35:10.797+00:00\",\n            \"deleteFlg\": false\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetProduct By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/pub/product/details?id=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"pub",
+								"product",
+								"details"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetProductById_200_request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8081/api/pub/product-list?page=2&size=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"pub",
+										"product-list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 06:44:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"SUCCESSFULLY_FETCHED\",\n    \"details\": [\n        {\n            \"id\": 6,\n            \"name\": \"Macbook Air M1 1TB\",\n            \"description\": \"Apple Macbook Air M1 1TB USA Varient\",\n            \"price\": 700000,\n            \"qty\": 8,\n            \"imageUrl\": \"D/ecommerce_system/image/products/MacbookAirM1.jpg\",\n            \"createdDt\": \"2025-04-14T18:34:51.566+00:00\",\n            \"updatedDt\": \"2025-04-14T18:34:51.566+00:00\",\n            \"deleteFlg\": false\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Macbook Air M2 1TB\",\n            \"description\": \"Apple Macbook Air M2 1TB USA Varient\",\n            \"price\": 1700000,\n            \"qty\": 8,\n            \"imageUrl\": \"D/ecommerce_system/image/products/MacbookAirM2.jpg\",\n            \"createdDt\": \"2025-04-14T18:35:10.797+00:00\",\n            \"updatedDt\": \"2025-04-14T18:35:10.797+00:00\",\n            \"deleteFlg\": false\n        }\n    ]\n}"
+						},
+						{
+							"name": "GetProductById_NotFound_404_request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8081/api/pub/product/details?id=20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"pub",
+										"product",
+										"details"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 08:05:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"PRODUCT_NOT_FOUND\",\n    \"error\": \"Product not found. Please Enter Valid product id.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Search Product by Keyword",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/pub/product/search?keyword=apple&page=1&size=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"pub",
+								"product",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "apple"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SearchProduct_200_Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8081/api/pub/product/search?keyword=apple&page=11&size=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"pub",
+										"product",
+										"search"
+									],
+									"query": [
+										{
+											"key": "keyword",
+											"value": "apple"
+										},
+										{
+											"key": "page",
+											"value": "11"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 06:20:46 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"SUCCESSFULLY_FETCHED\",\n    \"details\": [\n        {\n            \"id\": 3,\n            \"name\": \"Airpods Pro\",\n            \"description\": \"Apple Airpods Pro Gen 1\",\n            \"price\": 150000,\n            \"qty\": 20,\n            \"imageUrl\": \"D/ecommerce_system/image/products/airpodsPG1.jpg\",\n            \"createdDt\": \"2025-04-14T18:32:43.445+00:00\",\n            \"updatedDt\": \"2025-04-14T18:32:43.445+00:00\",\n            \"deleteFlg\": false\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Airpods Pro 2\",\n            \"description\": \"Apple Airpods Pro Gen 2\",\n            \"price\": 200000,\n            \"qty\": 25,\n            \"imageUrl\": \"D/ecommerce_system/image/products/airpodsPG2.jpg\",\n            \"createdDt\": \"2025-04-14T18:33:02.350+00:00\",\n            \"updatedDt\": \"2025-04-14T18:33:02.350+00:00\",\n            \"deleteFlg\": false\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Macbook Air M1 256GB\",\n            \"description\": \"Apple Macbook Air M1 256GB USA Varient\",\n            \"price\": 700000,\n            \"qty\": 8,\n            \"imageUrl\": \"D/ecommerce_system/image/products/MacbookAirM1.jpg\",\n            \"createdDt\": \"2025-04-14T18:34:15.420+00:00\",\n            \"updatedDt\": \"2025-04-14T18:34:15.420+00:00\",\n            \"deleteFlg\": false\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Macbook Air M1 1TB\",\n            \"description\": \"Apple Macbook Air M1 1TB USA Varient\",\n            \"price\": 700000,\n            \"qty\": 8,\n            \"imageUrl\": \"D/ecommerce_system/image/products/MacbookAirM1.jpg\",\n            \"createdDt\": \"2025-04-14T18:34:51.566+00:00\",\n            \"updatedDt\": \"2025-04-14T18:34:51.566+00:00\",\n            \"deleteFlg\": false\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Macbook Air M2 1TB\",\n            \"description\": \"Apple Macbook Air M2 1TB USA Varient\",\n            \"price\": 1700000,\n            \"qty\": 8,\n            \"imageUrl\": \"D/ecommerce_system/image/products/MacbookAirM2.jpg\",\n            \"createdDt\": \"2025-04-14T18:35:10.797+00:00\",\n            \"updatedDt\": \"2025-04-14T18:35:10.797+00:00\",\n            \"deleteFlg\": false\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "upload image",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1f01965d-9df3-4280-b3d9-8cacb7fb93cf"
+								},
+								{
+									"key": "category",
+									"value": "PRODUCT_PROFILE",
+									"type": "text"
+								},
+								{
+									"key": "fileName",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/private/upload-image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"private",
+								"upload-image"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Upload-Image_AlreadyExists_500_request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": [
+												"postman-cloud:///1ef9a8a7-1f2d-4a00-87e0-70bf0918ebcf",
+												"/C:/Users/khali.KHALID/Downloads/HMS-Home Page.png"
+											]
+										},
+										{
+											"key": "category",
+											"value": "PRODUCT_PROFILE",
+											"type": "text"
+										},
+										{
+											"key": "fileName",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/private/upload-image",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"upload-image"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Apr 2025 19:18:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 500,\n    \"message\": \"An unknown error occurred.\",\n    \"error\": \"MissingServletRequestPartException: Required part 'image' is not present.\"\n}"
+						},
+						{
+							"name": "upload image_200_Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "postman-cloud:///1f01965d-9df3-4280-b3d9-8cacb7fb93cf"
+										},
+										{
+											"key": "category",
+											"value": "PRODUCT_PROFILE",
+											"type": "text"
+										},
+										{
+											"key": "fileName",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/private/upload-image",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"upload-image"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Apr 2025 19:23:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"SUCCESSFULLY_CREATED\",\n    \"details\": \"D:\\\\EcommerceSystem\\\\images\\\\PRODUCT_PROFILE\\\\PRODUCT_PROFILE3.png\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order Management",
+			"item": [
+				{
+					"name": "CreateOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Macbook Air M2 1TB\",\r\n    \"description\" : \"Apple Macbook Air M2 1TB USA Varient\",\r\n    \"price\" : 1700000,\r\n    \"quantity\" : 8,\r\n    \"imageUrl\" : \"D/ecommerce_system/image/products/MacbookAirM2.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/private/product/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"private",
+								"product",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CreateOrder_200_Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productId\" : 2,\r\n    \"quantity\" : 2,\r\n    \"paymentMethod\" : \"COD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/private/order/place",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"order",
+										"place"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 12:32:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"SUCCESSFULLY_CREATED\",\n    \"details\": {\n        \"id\": 1,\n        \"productId\": 2,\n        \"quantity\": 2,\n        \"productPricePerUnit\": 15000,\n        \"totalAmount\": 30000,\n        \"status\": \"PENDING\",\n        \"createdDt\": \"2025-04-15T12:32:44.899+00:00\",\n        \"updatedDt\": null,\n        \"buyerId\": 6\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateOrder",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\" : 1,\r\n    \"quantity\" : 4,\r\n    \"paymentMethod\" : \"MFS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/private/product/update?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"private",
+								"product",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateOrder_500_Invalid_PaymentType_Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderId\" : 1,\r\n    \"quantity\" : 4,\r\n    \"paymentMethod\" : \"COD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/private/order/update/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"order",
+										"update",
+										"1"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 14:16:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 500,\n    \"message\": \"An error occurred while processing your request.\",\n    \"error\": \"IllegalArgumentException: No enum constant com.khalid.ecommerce_system.constant.PaymentMethod matches value: CASH\"\n}"
+						},
+						{
+							"name": "UpdateOrder_NotFound_404_Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderId\" : 5,\r\n    \"quantity\" : 4,\r\n    \"paymentMethod\" : \"COD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/private/order/update/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"order",
+										"update",
+										"1"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 14:22:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"ORDER_NOT_FOUND\",\n    \"error\": \"Order not found. Please Enter Valid order id.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Order History By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\" : 1,\r\n    \"quantity\" : 4,\r\n    \"paymentMethod\" : \"MFS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/private/order/history/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"private",
+								"order",
+								"history",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Order_History_By_Id_200_Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderId\" : 1,\r\n    \"quantity\" : 4,\r\n    \"paymentMethod\" : \"MFS\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/private/order/history/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"order",
+										"history",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 15:03:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"SUCCESSFULLY_FETCHED\",\n    \"details\": [\n        {\n            \"id\": 1,\n            \"updatedQuantity\": 4,\n            \"updatedStatus\": \"PENDING\",\n            \"paymentMethod\": \"COD\",\n            \"updatedDt\": \"2025-04-15T14:31:50.964+00:00\"\n        },\n        {\n            \"id\": 2,\n            \"updatedQuantity\": 4,\n            \"updatedStatus\": \"PENDING\",\n            \"paymentMethod\": \"BANK_TRANSFER\",\n            \"updatedDt\": \"2025-04-15T15:03:07.200+00:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Change_Order_Status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\" : 1,\r\n    \"status\" : \"APPROVED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/private/order/change-status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"private",
+								"order",
+								"change-status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Change_order_status_Approved_200_request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderId\" : 1,\r\n    \"status\" : \"APPROVED\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/private/order/change-status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"private",
+										"order",
+										"change-status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'; script-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains;preload"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 15:24:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"SUCCESSFULLY_UPDATED\",\n    \"details\": {\n        \"id\": 1,\n        \"productId\": 2,\n        \"quantity\": 4,\n        \"productPricePerUnit\": 15000,\n        \"totalAmount\": 60000,\n        \"status\": \"APPROVED\",\n        \"createdDt\": \"2025-04-15T12:32:44.899+00:00\",\n        \"updatedDt\": \"2025-04-15T15:24:30.698+00:00\",\n        \"buyerId\": 6\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get_Order_Details_by_Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Ecommerce-Token {{Ecommerce-access-key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\" : 1,\r\n    \"status\" : \"APPROVED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/private/order/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"private",
+								"order",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Ecommerce-access-key",
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJraGFsaWQuaGFzYW5AZ21haWwuY29tIiwicm9sZXMiOiJBRE1JTiIsImlhdCI6MTc0NDcyOTUzMywiZXhwIjoxNzQ0ODE1OTMzfQ.-df2cdqS9PCxeL4bUkQ7dHKSCTmzMglTIl-2i9K7-L3oJNqBbB6ZxIQVfp_EaFfxm8xqOwj_1DlGFhX2n_iPFA",
+			"type": "string"
+		},
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
